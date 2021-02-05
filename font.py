@@ -13,9 +13,10 @@ O    O OO
 """
 
 number_data = """
-
   OO
  O O
+   O
+   O
    O
    O
    O 
@@ -23,6 +24,7 @@ number_data = """
 
  OOOO
 O    O
+     O
      O
    OO
   O
@@ -33,6 +35,7 @@ OOOOOO
     O
    O
   OOO
+     O
      O
 O    O
  OOOO
@@ -71,11 +74,13 @@ O    O
    O
    O
    O
+   O
 
  OOOO
 O    O
 O    O
  OOOO
+O    O
 O    O
 O    O
  OOOO
@@ -175,6 +180,7 @@ OOO
 OOO
 
      OOO
+      O
       O
       O
       O
