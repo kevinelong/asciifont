@@ -3,9 +3,9 @@ def load_font(data_list, base="A"):
     output_dict = {}
     row_list = []
     for i, line in enumerate(data_list):
-        if (i+1) % ROWS_PER_CHARACTER == 0:
+        if (i + 1) % ROWS_PER_CHARACTER == 0:
             index = i // ROWS_PER_CHARACTER
-            key = chr( base_index + index)
+            key = chr(base_index + index)
             output_dict[key] = row_list
             row_list = []
         else:
@@ -21,14 +21,19 @@ def load_font(data_list, base="A"):
     return output_dict
 
 
+def print_letter(key, data_dict):
+    letter = data_dict[key]
+    for row in letter:
+        for c in row:
+            t = "." if c == 0 else "O"
+            print(t, end="")
+        print("")
+    print("-" * 8)
+
+
 def print_font(data_dict):
-    for key, letter in data_dict.items():
-        for row in letter:
-            for c in row:
-                t = "." if c == 0 else "O"
-                print(t, end="")
-            print("")
-        print("-" * 8)
+    for key in data_dict:
+        print_letter(key, data_dict)
 
 
 def read(prefix="alpha"):
